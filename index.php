@@ -25,5 +25,26 @@
                 </ul>
             </div>
         </nav>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-7">
+                    <form>
+                        <div class="form-group">
+                            <label>Nome Site</label>
+                            <input type="text" name="name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Site Link</label>
+                            <input type="text" name="link" class="form-control">
+                        </div>
+                        <input type="submit" value="Salvar" class="btn btn-default">
+                    </form>
+                </div>
+                <div class="md-5">
+                    
+                </div>
+            </div>
+        </div>
     </body>
 </html>
