@@ -63,7 +63,7 @@
                             <input type="text" name="name" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>Site Link</label>
+                            <label>Link</label>
                             <input type="text" name="link" class="form-control">
                         </div>
                         <input type="submit" value="Salvar" class="btn btn-default">
