@@ -1,9 +1,5 @@
 <?php 
-    session_start();
-    echo '<pre>';
-    print_r($_SESSION);
-    echo '</pre>';
-    
+    session_start();    
 
     if (isset($_POST['name'])) {
      
@@ -24,8 +20,6 @@
         session_destroy();
         header("Location: index.php");  
     }    
-
-
 
  ?>
 
@@ -85,8 +79,7 @@
                                 </li>
                             <?php endforeach; ?>
                         </ul>
-                    <?php endif; ?>
-                    
+                    <?php endif; ?>                    
                 </div>
             </div>
         </div>
