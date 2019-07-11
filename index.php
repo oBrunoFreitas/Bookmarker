@@ -1,5 +1,9 @@
 <?php 
     session_start();
+    echo '<pre>';
+    print_r($_SESSION);
+    echo '</pre>';
+    
 
     if (isset($_POST['name'])) {
      
@@ -12,8 +16,13 @@
     
     if (isset($_GET['action']) && $_GET['action'] = 'delete') {
         unset($_SESSION['bookmarks'][$_GET['name']]);
-        header("Location: index.php");    
-        
+        header("Location: index.php");  
+    }
+
+    if (isset($_GET['action']) && $_GET['action'] = 'clear') {
+        session_unset();
+        session_destroy();
+        header("Location: index.php");  
     }    
 
 
@@ -71,7 +80,7 @@
                         <ul class="list-group">
                             <?php foreach ($_SESSION['bookmarks'] as $name => $link): ?>
                                 <li class="list-group-item">
-                                    <a target="_blank" href="<?php echo "https://".$Link; ?>"><?php echo $name; ?> </a>
+                                    <a target="_blank" href="<?php echo "https://".$link; ?>"><?php echo $name; ?> </a>
                                     <a class="delete" href="index.php?action=delete&name=<?php echo $name; ?>"> [X]</a>
                                 </li>
                             <?php endforeach; ?>
